@@ -17,7 +17,28 @@
     ?>
 
     <h2>Ejercicio 3</h2>
-    <!-- TODO -->
+    <!---Amplia el programa anterior, pero pidiendo el nombre y apellidos al usuario.  --->
+    <!---NOTA: Este ejercicio lo hice posterior a los siguientes ejercicios que piden datos al usuario  --->
+    <form action="VariablesHectorLiarte.php" method="post">
+        <p>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" />
+        </p>
+        <p>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" />
+        </p>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <?php
+    if (isset($_POST['nombre']) && isset($_POST['apellidos'])) {
+    $nombre = $_POST['nombre'];
+    $apellidos = $_POST['apellidos'];
+
+    echo "Tu nombre es: $nombre y tus apellidos son:  $apellidos";
+    }
+    ?>
 
     <h2>Ejercicio 4</h2>
     <?php
@@ -36,7 +57,7 @@
     $usuarioBBDD;
     $contrasenyaBBDD;
     ?>
-    
+
     <h2>Ejercicio 5</h2>
     <?php
     /*
@@ -57,7 +78,7 @@
     echo "Operación 7 (\$a * \$b == -34.8): " . (int) ($a * $b == -34.8) . " → " . (($a * $b == -34.8) ? "true" : "false") . "<br>";
     echo "Operación 8 ((\$a + \$b) > (\$b + \$c)): " . (int) (($a + $b) > ($b + $c)) . " → " . ((($a + $b) > ($b + $c)) ? "true" : "false") . "<br>";
     ?>
-  
+
     <h2>Ejercicio 6</h2>
     <?php
     // Crea un programa que calcule la suma de los números pedidos al usuario, usando variables llamadas "numero1" y "numero2"
@@ -66,7 +87,7 @@
 
     echo $numero1 . " + " . $numero2 . " = " . $numero1 + $numero2;
     ?>
-  
+
     <h2>Ejercicio 7</h2>
     <?php
     // Crea un programa que calcule el producto de los números pedidos al usuario, usando variables llamadas "numero1" y "numero2".
@@ -87,7 +108,7 @@
     <h2>Ejercicio 9</h2>
     <?php
     // Crea  un  vector  asociativo  que  almacene  los  siguientes  datos  de  tres  compañeros  de  clase: Nombre, apellidos, teléfono y edad. 
-    $companyeros = Array(
+    $companyeros = array(
         array('nombre' => "Hector", 'apellidos' => "Liarte Herrera", 'telefono' => "123456789", 'edad' => "23"),
         array('nombre' => "Jorge", 'apellidos' => "Reolid Sanus", 'telefono' => "987654321", 'edad' => "22"),
         array('nombre' => "Roberto", 'apellidos' => "Moreno Garcia", 'telefono' => "123498765", 'edad' => "33")
@@ -106,4 +127,5 @@
     echo 'Fecha de Nacimiento: ' . date("y/m/d", $dob);
     ?>
 </body>
+
 </html>
