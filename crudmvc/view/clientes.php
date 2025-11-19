@@ -9,7 +9,14 @@
 <tr class="text-center"> 
     <th>Id</th> 
     <th>Nombre</th> 
+    <th>Apellidos</th> 
     <th>Email</th> 
+    <th>Contraseña</th> 
+    <th>Dirección</th> 
+    <th>CP</th> 
+    <th>Población</th> 
+    <th>Provincia</th> 
+    <th>Fecha De Nacimiento</th> 
     <th></th> 
 </tr> 
 </thead> 
@@ -21,7 +28,14 @@ if ($clientes->filas) :
 <tr> 
     <td style="text-align: right; width: 5%;"><?php echo $fila->id; ?></td> 
     <td><?php echo $fila->nombre; ?></td> 
-    <td><?php echo $fila->email; ?></td> 
+    <td><?php echo $fila->apellidos; ?></td>
+    <td><?php echo $fila->email; ?></td>
+    <td><?php echo $fila->contrasena; ?></td>
+    <td><?php echo $fila->direccion; ?></td>
+    <td><?php echo $fila->cp; ?></td>
+    <td><?php echo $fila->poblacion; ?></td>
+    <td><?php echo $fila->provincia; ?></td>
+    <td><?php echo $fila->fecha_nacimiento; ?></td>
     <td style="text-align: right; width: 50%;"> 
         <a href="index.php?c=clientes&m=editar&id=<?php echo $fila->id; ?>"> 
             <button type="button" class="btn btn-success">Editar</button></a> 

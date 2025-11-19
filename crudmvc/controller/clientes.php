@@ -26,7 +26,15 @@ class ClientesControlador
         $cliente = new ClientesModelo();
 
         $cliente->nombre = $_POST['nombre'];
+        $cliente->apellidos = $_POST['apellidos'];
         $cliente->email = $_POST['email'];
+        $cliente->contrasena = $_POST['contrasena'];
+        $cliente->direccion = $_POST['direccion'];
+        $cliente->cp = $_POST['cp'];
+        $cliente->poblacion = $_POST['poblacion'];
+        $cliente->provincia = $_POST['provincia'];
+        $cliente->fecha_nacimiento = $_POST['fecha_nacimiento'];
+
 
         if ($cliente->Insertar() == 1)
             header("location:" . URLSITE . '?c=clientes');
@@ -60,7 +68,15 @@ class ClientesControlador
 
         $cliente->id = $_GET['id'];
         $cliente->nombre = $_POST['nombre'];
+        $cliente->apellidos = $_POST['apellidos'];
         $cliente->email = $_POST['email'];
+        $cliente->contrasena = $_POST['contrasena'];
+        $cliente->direccion = $_POST['direccion'];
+        $cliente->cp = $_POST['cp'];
+        $cliente->poblacion = $_POST['poblacion'];
+        $cliente->provincia = $_POST['provincia'];
+        $cliente->fecha_nacimiento = $_POST['fecha_nacimiento'];
+
 
         // Aquí hay que tener cuidado, en el caso de que se pulse el botón de aceptar 
         // pero no se haya modificado nada, la función modificar devolverá un cero, 
