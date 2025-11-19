@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <form action="./contacto.php?accion=1" method="post" enctype="multipart/form-data">
+            <p>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" />
+            </p>
+            <p>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" />
+            </p>
+            <p>
+                <label for="usuario">Usuario</label>
+                <input type="us" name="usuario" id="usuario" />
+            </p>
+            <p>
+                <label for="contrasenya">Contraseña</label>
+                <input type="password" name="contrasenya" id="contrasenya" />
+            </p>
+            <p>
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" id="direccion" />
+            </p>
+            <p>
+                <label for="cp">C.P.</label>
+                <input type="cp" name="cp" id="cp" />
+            </p>
+            <p>
+                <label for="poblacion">Población</label>
+                <input type="text" name="poblacion" id="poblacion" />
+            </p>
+            <p>
+                <label for="provincia">Provincia</label>
+                <input type="text" name="provincia" id="provincia" />
+            </p>
+            <p>
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" />
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+            </p>
+            <p>
+                <label for="fechanacimiento">Fecha nacimiento</label>
+                <input type="date" name="fechanacimiento" id="fechanacimiento" />
+            </p>
+            <p>
+                <label for="foto">Foto del usuario</label>
+                <input type="file" name="foto" id="foto" accept="image/*" />
+            </p>
+            <p>
+                <input type="submit" id="enviar" value="Enviar" />
+            </p>
+        </form>
+    </body>
+</html>

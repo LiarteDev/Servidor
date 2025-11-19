@@ -1,0 +1,1 @@
+<?php echo "Ponte en contacto con el servicio técnico";
