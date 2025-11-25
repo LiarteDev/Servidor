@@ -104,4 +104,41 @@ class ClientesControlador
             header("location:" . URLSITE . "view/error.php");
         }
     }
+
+    // http://localhost/mvc/?c=clientes&m=exportar
+    static function Exportar()
+    {
+        // Nos creamos el objeto clientes para acceder a la tabla clientes de la BBDD.
+        $clientes = new ClientesModelo();
+
+        // Seleccionamos todos los clientes.
+        $clientes->Seleccionar();
+
+        try {
+            // Abrimos el fichero clientes.csv en modo escritura.
+            $fichero = fopen("clientes.csv", "w");
+
+            // Para cada fila de la tabla...
+            foreach ($clientes->filas as $fila) {
+                // creamos la línea a exportar y...
+                $cadena = "$fila->id#$fila->nombre#$fila->telefono\n";
+
+                // la guardamos la línea en el fichero.
+                fputs($fichero, $cadena);
+            }
+        } finally {
+            // Cerramos el fichero.
+            fclose($fichero);
+        }
+
+        // Finalmente exportamos el fichero.
+        $rutaFichero = 'clientes.csv';
+        $fichero = basename($rutaFichero);
+
+        header("Content-Type: application/octet-stream");
+        header("Content-Length: " . filesize($rutaFichero));
+        header("Content-Disposition: attachment; filename=" . $fichero);
+
+        readfile($rutaFichero);
+    }
 }

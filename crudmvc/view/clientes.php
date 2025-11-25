@@ -50,15 +50,25 @@ if ($clientes->filas) :
 endif; 
 ?> 
 </tbody> 
-<tfoot> 
-<tr> 
-    <td colspan="4"> 
-        <a href="index.php?c=clientes&m=nuevo"> 
-        <button type="button" class="btn btn-primary">Nuevo</button> 
-        </a> 
-    </td> 
-</tr> 
-</tfoot> 
+ <tfoot>
+        <tr>
+            <td colspan="4">
+                <a href="index.php?c=clientes&m=nuevo">
+                    <button type="button" class="btn btn-primary">Nuevo</button>
+                </a>
+ 
+                           <!-- Añadimos el nuevo botón para exportar --->
+                <a href="index.php?c=clientes&m=exportar">
+                    <button type="button" class="btn btn-success">Exportar</button>
+                </a>
+                           <!-------------------------------------------->
+                
+ 
+            </td>
+        </tr>
+
+
+    </tfoot>
 </table> 
  
 <?php require("layout/footer.php"); ?>
